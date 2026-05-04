@@ -12,7 +12,7 @@ import { api, getConfig, isConfigured, getRefreshInterval } from '@/api/client'
 import { cn, formatPrice, pnlClass } from '@/lib/utils'
 import { SettingsModal } from '@/components/SettingsModal'
 import { useFundingCountdown } from '@/hooks/use-countdown'
-import { Settings, Globe, Search, RefreshCw, Timer, Activity } from 'lucide-react'
+import { Settings, Globe, Search, RefreshCw, Timer, Activity, Github } from 'lucide-react'
 
 interface FundingItem {
   market: string
@@ -142,6 +142,15 @@ export default function App() {
                 </span>
               </div>
             )}
+            <a
+              href="https://github.com/Ellenp2p/decibel-funding-dashboard"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex h-9 items-center gap-1.5 rounded-lg px-3 text-xs font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+            >
+              <Github className="h-3.5 w-3.5" />
+              <span className="hidden sm:inline">GitHub</span>
+            </a>
             <button
               onClick={() => setLanguage(i18n.language === 'zh' ? 'en' : 'zh')}
               className="flex h-9 items-center gap-1.5 rounded-lg px-3 text-xs font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
